@@ -1,0 +1,61 @@
+html {
+    background-color: black;
+}
+
+header, body, footer {
+    background-color: yellow;
+
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+
+.header_title {
+    font:xx-large;
+    text-align:center;
+    color: rgb(55,68,98);
+}
+.top_section{
+    background-color: white;
+    height: min-content;
+    font-size: x-large;
+}
+
+
+.header_sections {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items:center;
+    height:5cap;
+    background-color: blue;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    background-color: chartreuse;
+    border: 5px solid;
+}
+
+.introduction div[div^='introduction_'] {
+    background-color: blueviolet;
+    margin: 10px;
+    gap: 10px;
+}
+
+#hiring {
+    /* display: none; */
+    display: flex;
+    background-color:darkturquoise;
+    color: white;
+}
