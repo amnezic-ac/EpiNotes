@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "${port}:${port}"
+      - "${port2}:${port2}"
+    volumes:
+      - ./:/var/www/html
+      - ./000-default.conf:/etc/apache2/conf.d/000-default.conf
