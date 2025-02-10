@@ -35,8 +35,15 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+/*
+TODO: increase the size of each one of the top section and make corner round
+*/
+#top_section_left, #top_section_center, #top_section_right {
     font-size: x-large;
     background-color: rgb(40, 36, 36);
+    height: 30px;
 }
 
 .introduction {
@@ -47,5 +54,4 @@ a:hover {
     color: black;
     width: 90%;
     margin: 20px auto;
-
 }
