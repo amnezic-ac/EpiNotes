@@ -1,20 +1,19 @@
-html {
-    background-color: black;
+header, body, footer {
+    background-color: rgb(58, 48, 48);
+    color: white
+
 }
 
-header, body, footer {
-    background-color: yellow;
-
+a {
+    color: white;
 }
 
 a:link {
     text-decoration: none;
-    color: black;
 }
 
 a:hover {
     text-decoration: underline;
-    color: black;
 }
 
 
@@ -22,40 +21,32 @@ a:hover {
     font:xx-large;
     text-align:center;
     color: rgb(55,68,98);
+    gap: 10px;
 }
-.top_section{
-    background-color: white;
-    height: min-content;
-    font-size: x-large;
-}
-
 
 .header_sections {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items:center;
+    flex-direction: column;
+    gap: 10px;
     height:5cap;
-    background-color: blue;
+}
+
+.top_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: x-large;
+    background-color: rgb(40, 36, 36);
+    margin: 50%;
 }
 
 .introduction {
     display: flex;
     flex-direction: column;
-    background-color: chartreuse;
-    border: 5px solid;
-}
+    justify-items: center;
+    background-color: white;
+    color: black;
+    width: 90%;
+    margin: 20px auto;
 
-.introduction div[div^='introduction_'] {
-    background-color: blueviolet;
-    margin: 10px;
-    gap: 10px;
-}
-
-#hiring {
-    /* display: none; */
-    display: flex;
-    background-color:darkturquoise;
-    color: white;
 }
