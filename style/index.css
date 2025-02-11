@@ -1,5 +1,9 @@
 header, body, footer {
     background-color: rgb(135, 130, 130);
+    /*
+    background-image: url("../images/background.png");
+    background-size: cover;
+    */
     color: white;
 }
 
@@ -19,9 +23,8 @@ header {
     display: flex;
     flex-direction: column;
     /* à voir pourquoi on ne peut pas descendre en dessous de 25% */
-    height: 25%;
+    height: fit-content;
     gap: 10px;
-    background-color: royalblue;
 }
 
 
@@ -41,7 +44,8 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 30%;
+    /* each section takes 30% of the width */
+    flex: 1;
     text-align: center;
 }
 
@@ -51,7 +55,7 @@ button {
     border-radius: 12px;
     padding: 10px;
     font-size: x-large;
-    width: 75%;
+    width: fit-content;
     color: white;
 }
 
@@ -63,17 +67,22 @@ button:hover {
 
 #hiring {
     flex: display;
-    flex-direction: column;
-    background-color: tomato;
+    flex-direction: row;
 }
 
 .introduction {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    background-color: white;
+    /* background-color: white; */
     color: black;
-    width: 90%;
-    margin: 20px auto;
-    box-shadow: 8px 8px 5px #444;
+    /* margin: top right bottom left */
+    margin-top: 3%;
+    margin-left: 2%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    backdrop-filter: blur(5px);
+    padding: 15px;
+}
+
+.introduction.a {
+    color:black;
+    text-decoration: none;
 }
