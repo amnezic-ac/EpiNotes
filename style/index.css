@@ -1,7 +1,6 @@
 header, body, footer {
-    background-color: rgb(58, 48, 48);
-    color: white
-
+    background-color: rgb(135, 130, 130);
+    color: white;
 }
 
 a {
@@ -19,7 +18,10 @@ a:hover {
 header {
     display: flex;
     flex-direction: column;
-    height: 20%;
+    /* à voir pourquoi on ne peut pas descendre en dessous de 25% */
+    height: 25%;
+    gap: 10px;
+    background-color: royalblue;
 }
 
 
@@ -27,15 +29,12 @@ header {
 .header_title {
     font:xx-large;
     text-align:center;
-    color: rgb(55,68,98);
-    gap: 10px;
 }
 
 .header_sections {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 80%;
 }
 
 #top_section_left, #top_section_center, #top_section_right {
@@ -52,7 +51,7 @@ button {
     border-radius: 12px;
     padding: 10px;
     font-size: x-large;
-    width: 90%;
+    width: 75%;
     color: white;
 }
 
@@ -60,6 +59,12 @@ button:hover {
     /* display a transition when button is hovered with shadow (to investigate) */
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.4s;
+}
+
+#hiring {
+    flex: display;
+    flex-direction: column;
+    background-color: tomato;
 }
 
 .introduction {
