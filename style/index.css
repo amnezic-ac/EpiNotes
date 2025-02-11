@@ -16,6 +16,13 @@ a:hover {
     text-decoration: underline;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+}
+
+
 
 .header_title {
     font:xx-large;
@@ -26,24 +33,33 @@ a:hover {
 
 .header_sections {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height:5cap;
-}
-
-.top_section{
-    display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 80%;
 }
 
-/*
-TODO: increase the size of each one of the top section and make corner round
-*/
 #top_section_left, #top_section_center, #top_section_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+    text-align: center;
+}
+
+
+button {
+    background-color: rgb(42, 39, 39);
+    border-radius: 12px;
+    padding: 10px;
     font-size: x-large;
-    background-color: rgb(40, 36, 36);
-    height: 30px;
+    width: 90%;
+    color: white;
+}
+
+button:hover {
+    /* display a transition when button is hovered with shadow (to investigate) */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
 }
 
 .introduction {
@@ -54,4 +70,5 @@ TODO: increase the size of each one of the top section and make corner round
     color: black;
     width: 90%;
     margin: 20px auto;
+    box-shadow: 8px 8px 5px #444;
 }
