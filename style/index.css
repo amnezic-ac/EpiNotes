@@ -4,7 +4,8 @@ header, body, footer {
     background-image: url("../images/background.png");
     background-size: cover;
     */
-    color: white;
+    color: red;
+    font-size: large;
 }
 
 a {
@@ -22,7 +23,6 @@ a:hover {
 header {
     display: flex;
     flex-direction: column;
-    /* à voir pourquoi on ne peut pas descendre en dessous de 25% */
     height: fit-content;
     gap: 10px;
 }
@@ -33,6 +33,7 @@ header {
     font:xx-large;
     text-align:center;
 }
+
 
 .header_sections {
     display: flex;

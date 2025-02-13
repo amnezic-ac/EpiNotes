@@ -6,9 +6,11 @@ window.onload = function() {
 };
 */
 
+/*
 document.getElementById("myButton").addEventListener("click", function() {
     alert("Bouton cliqué !");
 });
+*/
 
 var $j = jQuery.noConflict();
 
@@ -53,7 +55,7 @@ function addContributors(data){
     let formattedContributors = data.map((contributor, index) => {
         if (index === data.length - 1 && data.length > 1) {
             return ` et ${contributor}`;
-        } else if (index === data.length - 2){
+        } else if (index < data.length - 2){
             return `${contributor}, `
         } else {
             return `${contributor} `;

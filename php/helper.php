@@ -19,7 +19,7 @@ function get_directory(){
 }
 
 function get_contributors(){
-    $contributors = ["amnezic", "clovis"];
+    $contributors = ["geoffroy", "amnezic", "clovis"];
     echo json_encode($contributors);
 }
 
