@@ -1,15 +1,26 @@
 header, body, footer {
-    background-color: rgb(135, 130, 130);
     /*
-    background-image: url("../images/background.png");
-    background-size: cover;
+    background-color: rgb(135, 130, 130);
+    color: black;
     */
-    color: red;
-    font-size: large;
+}
+
+.dark-theme {
+    background-color: black;
+    color: white;
+}
+
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+.dark-mode a{
+    color: white;
 }
 
 a {
-    color: white;
+    text-decoration: none;
 }
 
 a:link {
@@ -34,6 +45,13 @@ header {
     text-align:center;
 }
 
+.header_title.dark-mode.a {
+    color: white;
+}
+
+.header_title.light-mode.a {
+    color: black;
+}
 
 .header_sections {
     display: flex;
@@ -45,7 +63,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* each section takes 30% of the width */
     flex: 1;
     text-align: center;
 }
@@ -72,8 +89,6 @@ button:hover {
 }
 
 .introduction {
-    /* background-color: white; */
-    color: black;
     /* margin: top right bottom left */
     margin-top: 3%;
     margin-left: 2%;
@@ -81,9 +96,4 @@ button:hover {
     margin-right: 2%;
     backdrop-filter: blur(5px);
     padding: 15px;
-}
-
-.introduction.a {
-    color:black;
-    text-decoration: none;
 }
