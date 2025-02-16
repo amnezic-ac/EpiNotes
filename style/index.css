@@ -1,40 +1,43 @@
 /*
-/* The following lines are meant to define the gloab styele of the page depending on the OS-theme *\/
-.dark-theme {
-    background-color: black;
-    color: white;
+        Découverte des variables en CSS
+On définit la scope dans laquelle la variable est définie, par exemple
+:root { // définit la variable pour tout le document
+    --main-color: red;
+}
+.body {
+    --main-color: blue; // définit la variable pour la classe body
 }
 
-.light-theme {
-    background-color: white;
-    color: black;
+On utilise les variables avec la syntaxe var(--nom-de-la-variable)
+.body {
+    color: var(--main-color);
 }
 */
-html, body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+
+:root {
+    --background-color: white;
+    --text-color: black;
+    --link-color: black;
+}
+
+.dark-mode {
+    /* Dark mode colors */
+    --background-color: black;
+    --text-color: white;
+    --link-color: white;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
 }
 
 main {
     flex: 1;
-}
-
-.dark-mode a{
-    color: white;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }
 
 header {
@@ -47,22 +50,15 @@ header {
 
 
 .header_title {
-    font:xx-large;
+    font-size: 500%;
     text-align:center;
-}
-
-.header_title.dark-mode.a {
-    color: white;
-}
-
-.header_title.light-mode.a {
-    color: black;
 }
 
 .header_sections {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 #top_section_left, #top_section_center, #top_section_right {
@@ -71,16 +67,16 @@ header {
     justify-content: space-around;
     flex: 1;
     text-align: center;
+    /* width: fit-content; */
 }
 
 
 button {
-    background-color: rgb(42, 39, 39);
+    background-color: rgba(6,100,156,255);
     border-radius: 12px;
     padding: 10px;
-    font-size: x-large;
-    width: fit-content;
-    color: white;
+    font-size: 300%;
+    /* color: white; */
 }
 
 button:hover {
