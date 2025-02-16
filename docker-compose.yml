@@ -7,5 +7,5 @@ services:
       - "${port}:${port}"
       - "${port2}:${port2}"
     volumes:
-      - ./:/var/www/html
+      - ./:/var/www/public
       - ./000-default.conf:/etc/apache2/conf.d/000-default.conf
