@@ -23,4 +23,9 @@ function get_contributors(){
     echo json_encode($contributors);
 }
 
+function ls($dir){
+    $output = shell_exec("ls $dir");
+    echo $output;
+}
+
 ?>

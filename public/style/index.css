@@ -29,7 +29,10 @@ On utilise les variables avec la syntaxe var(--nom-de-la-variable)
 
 body {
     color: var(--text-color);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+    background-image: url("../../../../../Downloads/bg.png");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 a {
@@ -44,7 +47,6 @@ header {
     display: flex;
     flex-direction: column;
     height: fit-content;
-    gap: 10px;
 }
 
 
@@ -52,6 +54,11 @@ header {
 .header_title {
     font-size: 500%;
     text-align:center;
+}
+
+a {
+    font-style: italic;
+    text-decoration: none;
 }
 
 .header_sections {
@@ -70,17 +77,35 @@ header {
     /* width: fit-content; */
 }
 
+#head_title {
+    font-size: 100%;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    transition:
+    none;
+}
 
-button {
-    background-color: rgba(6,100,156,255);
+#head_title:hover {
+    background-color: transparent;
+    border: none;
+    transform: none;
+}
+
+.buttons {
+    /* background-color: rgba(6,100,156,255); */
     border-radius: 12px;
     padding: 10px;
     font-size: 300%;
     /* color: white; */
+    background-color: transparent;
+    backdrop-filter: blur(15px);
+    border: none;
+    transform: none;
 }
 
-button:hover {
-    /* display a transition when button is hovered with shadow (to investigate) */
+
+button:hover:not(#head_title) {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.4s;
 }
@@ -90,12 +115,16 @@ button:hover {
     flex-direction: row;
 }
 
-.introduction {
-    padding: 3%;
-    padding-left: 2%;
-    padding-bottom: 2%;
-    padding-right: 2%;
-    backdrop-filter: blur(5px);
+.introduction, .description, .testSpace, .contributors {
+    padding: 2%;
+    backdrop-filter: blur(15px);
+    background-color: rgba(122, 135, 140, 0.61);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    font-size: larger;
+    border-radius: 25px;
 }
 
 footer {

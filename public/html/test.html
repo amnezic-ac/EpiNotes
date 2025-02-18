@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="video-container">
+        <script src="../scripts/Fill_Screen_Grey/libraries/p5.min.js"></script>
+        <script src="../scripts/Fill_Screen_Grey/libraries/p5.sound.min.js"></script>
+        <script src="../scripts/Fill_Screen_Grey/background.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+        <!--- JAVASCRIPT --->
+        <script language="JavaScript">
+            $(document).ready(function () {
+                $.ajax(
+                    {
+                        url: 'https://epinotes.fr/APIs/is_connected.php',
+                        type: 'GET',
+                        dataType: 'html',
+                        success: function (response, statut) {
+                            if (response == "Connexion") {
+                                $('#connection_button').text(response);
+                            }
+                            else {
+                                $('#connection_button').attr('onclick', 'window.location.href=\'public/scripts/php/start_page.php\'');
+                                $('#connection_button').text(response);
+                                $('.top_h1 h1').text("Reconnexion en cours...");
+                                $('.top_h1 h2').text("Vous allez être redirigé vers votre page de démarrage.");
+                                setTimeout(function () { window.location.href = "public/scripts/php/start_page.php"; }, 2000);
+
+                            }
+                        },
+                        error: function (resultat, statut, erreur) {
+                            //console.log(erreur);
+                        },
+
+                        complete: function (resultat, statut) {
+                            //console.log(resultat);
+                        }
+                    });
+            });
+        </script>
+
+    </div>
+</body>
+</html>
